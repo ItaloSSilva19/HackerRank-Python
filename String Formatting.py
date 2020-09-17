@@ -21,7 +21,30 @@ def octal(n):
     return "".join(string_octal[::-1])
 
 def hexadec(n):
-    pass
+    hexadec_list= []
+    result = n  
+
+    while result > 0:
+        remainder = result%16
+        if remainder == 10:
+            remainder = "A"
+        elif remainder == 11:
+            remainder = "B"
+        elif remainder == 12:
+            remainder = "C"            
+        elif remainder == 13:
+            remainder = "D" 
+        elif remainder == 14:
+            remainder = "E"
+        elif remainder == 15:
+            remainder = "F" 
+        hexadec_list.append(remainder)
+        result = result // 16
+
+    string_hexadec = "" 
+    for number in hexadec_list:
+        string_hexadec +=str(number)
+    return "".join(string_hexadec[::-1])
 
 def print_formatted(number):
     for i in range(1,number+1):
