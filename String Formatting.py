@@ -10,7 +10,15 @@ def binary(n):
     return "".join(string_bin[::-1])
 
 def octal(n):
-    pass
+    octal_list= []
+    result = n
+    while result > 0:
+        octal_list.append(result%8)
+        result = result // 8
+    string_octal = "" 
+    for number in octal_list:
+        string_octal +=str(number)   
+    return "".join(string_octal[::-1])
 
 def hexadec(n):
     pass
