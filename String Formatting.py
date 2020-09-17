@@ -1,5 +1,13 @@
 def binary(n):
-    pass
+    binary_list= []
+    result = n
+    while result > 0:
+        binary_list.append(result%2)
+        result = result // 2
+    string_bin = "" 
+    for number in binary_list:
+        string_bin +=str(number)   
+    return "".join(string_bin[::-1])
 
 def octal(n):
     pass
