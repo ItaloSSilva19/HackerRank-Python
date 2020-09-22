@@ -8,7 +8,6 @@ class Solution:
                 del(a[0])
                 del(a[-1])
             else:
-                print('b')
                 minimum_boat_number += 1
                 del(a[0])
 
