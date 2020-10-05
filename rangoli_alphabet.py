@@ -17,6 +17,12 @@ def print_rangoli(n):
     mirror_rangoli.pop()
     rangoli.extend(reversed(mirror_rangoli))
     
+    #Format each line of the rangoli alphabet and print the result
+    for i in rangoli:
+        x = "-".join(i)
+        print(x.center((n*4)-3,"-"))   
+
+            
  
 if __name__ == '__main__':
     n = int(input())
